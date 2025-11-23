@@ -1,0 +1,88 @@
+2025-11-01 23:08:35,473 - INFO - Loading embedding model from local cache: ./models/all-MiniLM-L6-v2
+2025-11-01 23:08:35,475 - INFO - Load pretrained SentenceTransformer: ./models/all-MiniLM-L6-v2
+2025-11-01 23:08:36,450 - INFO - Use pytorch device: cpu
+2025-11-01 23:08:36,519 - INFO - Loading existing index: ead0f2b4-52a9-4add-9023-8a7ca612121a
+2025-11-01 23:08:36,590 - INFO - Loaded index ead0f2b4-52a9-4add-9023-8a7ca612121a with 41 paragraphs
+2025-11-01 23:08:36,605 - INFO - HTTP Request: GET http://127.0.0.1:11434/api/tags "HTTP/1.1 200 OK"
+2025-11-01 23:08:36,696 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://10.39.230.15:5001
+2025-11-01 23:08:36,697 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-01 23:11:33,994 - INFO - Loading embedding model from local cache: ./models/all-MiniLM-L6-v2
+2025-11-01 23:11:33,995 - INFO - Load pretrained SentenceTransformer: ./models/all-MiniLM-L6-v2
+2025-11-01 23:11:34,599 - INFO - Use pytorch device: cpu
+2025-11-01 23:11:34,605 - INFO - Loading existing index: ead0f2b4-52a9-4add-9023-8a7ca612121a
+2025-11-01 23:11:34,607 - INFO - Loaded index ead0f2b4-52a9-4add-9023-8a7ca612121a with 41 paragraphs
+2025-11-01 23:11:34,618 - INFO - HTTP Request: GET http://127.0.0.1:11434/api/tags "HTTP/1.1 200 OK"
+2025-11-01 23:11:34,641 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://10.39.230.15:5001
+2025-11-01 23:11:34,642 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-01 23:36:29,857 - INFO - Loading embedding model from local cache: ./models/all-MiniLM-L6-v2
+2025-11-01 23:36:29,858 - INFO - Load pretrained SentenceTransformer: ./models/all-MiniLM-L6-v2
+2025-11-01 23:36:31,753 - INFO - Use pytorch device: cpu
+2025-11-01 23:36:31,788 - INFO - Loading existing index: ead0f2b4-52a9-4add-9023-8a7ca612121a
+2025-11-01 23:36:31,791 - INFO - Loaded index ead0f2b4-52a9-4add-9023-8a7ca612121a with 41 paragraphs
+2025-11-01 23:36:31,802 - INFO - HTTP Request: GET http://127.0.0.1:11434/api/tags "HTTP/1.1 200 OK"
+2025-11-01 23:36:32,791 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://10.39.230.15:5001
+2025-11-01 23:36:32,792 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-01 23:51:55,970 - INFO - Loading embedding model from local cache: ./models/all-MiniLM-L6-v2
+2025-11-01 23:51:55,970 - INFO - Load pretrained SentenceTransformer: ./models/all-MiniLM-L6-v2
+2025-11-01 23:51:56,545 - INFO - Use pytorch device: cpu
+2025-11-01 23:51:56,550 - INFO - Loading existing index: ead0f2b4-52a9-4add-9023-8a7ca612121a
+2025-11-01 23:51:56,552 - INFO - Loaded index ead0f2b4-52a9-4add-9023-8a7ca612121a with 41 paragraphs
+2025-11-01 23:51:56,578 - INFO - HTTP Request: GET http://127.0.0.1:11434/api/tags "HTTP/1.1 200 OK"
+2025-11-01 23:51:56,579 - INFO - Using Ollama model: llama3:latest
+2025-11-01 23:51:57,493 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://10.39.230.15:5001
+2025-11-01 23:51:57,495 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-01 23:52:17,115 - INFO - 127.0.0.1 - - [01/Nov/2025 23:52:17] "GET / HTTP/1.1" 200 -
+2025-11-01 23:52:17,134 - INFO - 127.0.0.1 - - [01/Nov/2025 23:52:17] "GET /style.css HTTP/1.1" 200 -
+2025-11-01 23:52:17,137 - INFO - 127.0.0.1 - - [01/Nov/2025 23:52:17] "GET /script.js HTTP/1.1" 200 -
+2025-11-01 23:52:17,801 - INFO - 127.0.0.1 - - [01/Nov/2025 23:52:17] "GET /list_indexes HTTP/1.1" 200 -
+2025-11-01 23:52:17,817 - INFO - HTTP Request: GET http://127.0.0.1:11434/api/tags "HTTP/1.1 200 OK"
+2025-11-01 23:52:17,818 - INFO - Using Ollama model: llama3:latest
+2025-11-01 23:52:17,821 - INFO - 127.0.0.1 - - [01/Nov/2025 23:52:17] "GET /system_status HTTP/1.1" 200 -
+2025-11-01 23:52:17,878 - INFO - 127.0.0.1 - - [01/Nov/2025 23:52:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-01 23:52:37,419 - INFO - Loaded index ead0f2b4-52a9-4add-9023-8a7ca612121a with 41 paragraphs
+2025-11-01 23:52:37,420 - INFO - 127.0.0.1 - - [01/Nov/2025 23:52:37] "POST /load_index HTTP/1.1" 200 -
+2025-11-01 23:52:37,429 - INFO - 127.0.0.1 - - [01/Nov/2025 23:52:37] "GET /list_indexes HTTP/1.1" 200 -
+2025-11-02 00:01:05,820 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-02 00:01:05,869 - INFO - 127.0.0.1 - - [02/Nov/2025 00:01:05] "POST /query HTTP/1.1" 200 -
+2025-11-02 00:01:29,978 - INFO - 127.0.0.1 - - [02/Nov/2025 00:01:29] "POST /export_chat HTTP/1.1" 200 -
+2025-11-02 00:01:29,985 - INFO - 127.0.0.1 - - [02/Nov/2025 00:01:29] "GET /download_export/chat_export_20251102_000129.txt HTTP/1.1" 200 -
+2025-11-02 00:04:14,827 - INFO - Loading embedding model from local cache: ./models/all-MiniLM-L6-v2
+2025-11-02 00:04:14,828 - INFO - Load pretrained SentenceTransformer: ./models/all-MiniLM-L6-v2
+2025-11-02 00:04:15,641 - INFO - Use pytorch device: cpu
+2025-11-02 00:04:15,649 - INFO - Loading existing index: ead0f2b4-52a9-4add-9023-8a7ca612121a
+2025-11-02 00:04:15,652 - INFO - Loaded index ead0f2b4-52a9-4add-9023-8a7ca612121a with 41 paragraphs
+2025-11-02 00:04:15,666 - INFO - HTTP Request: GET http://127.0.0.1:11434/api/tags "HTTP/1.1 200 OK"
+2025-11-02 00:04:15,667 - INFO - Using Ollama model: llama3:latest
+2025-11-02 00:04:15,856 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://10.39.230.15:5001
+2025-11-02 00:04:15,857 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-02 00:04:38,658 - INFO - 127.0.0.1 - - [02/Nov/2025 00:04:38] "[36mGET / HTTP/1.1[0m" 304 -
+2025-11-02 00:04:38,675 - INFO - 127.0.0.1 - - [02/Nov/2025 00:04:38] "[36mGET /style.css HTTP/1.1[0m" 304 -
+2025-11-02 00:04:38,690 - INFO - 127.0.0.1 - - [02/Nov/2025 00:04:38] "[36mGET /script.js HTTP/1.1[0m" 304 -
+2025-11-02 00:04:39,418 - INFO - 127.0.0.1 - - [02/Nov/2025 00:04:39] "GET /list_indexes HTTP/1.1" 200 -
+2025-11-02 00:04:39,421 - INFO - HTTP Request: GET http://127.0.0.1:11434/api/tags "HTTP/1.1 200 OK"
+2025-11-02 00:04:39,421 - INFO - Using Ollama model: llama3:latest
+2025-11-02 00:04:39,424 - INFO - 127.0.0.1 - - [02/Nov/2025 00:04:39] "GET /system_status HTTP/1.1" 200 -
+2025-11-02 00:04:45,953 - INFO - Loaded index ead0f2b4-52a9-4add-9023-8a7ca612121a with 41 paragraphs
+2025-11-02 00:04:45,954 - INFO - 127.0.0.1 - - [02/Nov/2025 00:04:45] "POST /load_index HTTP/1.1" 200 -
+2025-11-02 00:04:45,964 - INFO - 127.0.0.1 - - [02/Nov/2025 00:04:45] "GET /list_indexes HTTP/1.1" 200 -
+2025-11-02 00:15:04,909 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-11-02 00:15:04,912 - INFO - 127.0.0.1 - - [02/Nov/2025 00:15:04] "POST /query HTTP/1.1" 200 -
+2025-11-02 00:16:47,178 - ERROR - 10.39.230.15 - - [02/Nov/2025 00:16:47] code 400, message Bad request syntax ("\x16\x03\x03\x00¦\x01\x00\x00¢\x03\x03i\x06U\x97ýy\x87Lyd±°%f\x04\x88·tk=VÆ\x82ËJ3æ\x0fi;õ´\x00\x00*À,À+À0À/\x00\x9f\x00\x9eÀ$À#À(À'À")
+2025-11-02 00:16:47,179 - INFO - 10.39.230.15 - - [02/Nov/2025 00:16:47] "[31m[1m\x16\x03\x03\x00¦\x01\x00\x00¢\x03\x03i\x06U\x97ýy\x87Lyd±°%f\x04\x88·tk=VÆ\x82ËJ3æ\x0fi;õ´\x00\x00*À,À+À0À/\x00\x9f\x00\x9eÀ$À#À(À'À[0m" 400 -
+2025-11-02 00:16:47,182 - ERROR - 10.39.230.15 - - [02/Nov/2025 00:16:47] code 400, message Bad request version ("\x83¸öß|-ûåU<d\x8e\x8câMÛÛ\x00\x00*À,À+À0À/\x00\x9f\x00\x9eÀ$À#À(À'À")
+2025-11-02 00:16:47,182 - INFO - 10.39.230.15 - - [02/Nov/2025 00:16:47] "[31m[1m\x16\x03\x03\x00¦\x01\x00\x00¢\x03\x03i\x06U\x97%éX\x07·\x1fAÿÕl\x0d\x83¸öß|-ûåU<d\x8e\x8câMÛÛ\x00\x00*À,À+À0À/\x00\x9f\x00\x9eÀ$À#À(À'À[0m" 400 -

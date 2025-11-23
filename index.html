@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Q&A Assistant - Fully Offline</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Document Q&A Assistant</h1>
+            <p class="subtitle">Fully Offline - Upload PDFs or Use Existing Indexed Documents</p>
+            <div class="offline-status">
+                <span class="offline-indicator">🛡️ Fully Offline Mode</span>
+                <span class="system-status" id="systemStatus">Checking system status...</span>
+            </div>
+        </div>
+
+        <!-- System Status Alert -->
+        <div id="systemAlert" class="alert hidden">
+            <div class="alert-content">
+                <span class="alert-icon">⚠️</span>
+                <div class="alert-message">
+                    <strong>System Not Ready</strong>
+                    <span id="alertMessage">Some components are missing</span>
+                </div>
+                <button class="alert-action" onclick="app.showSetupInstructions()">Show Setup Guide</button>
+            </div>
+        </div>
+
+        <!-- Upload Section -->
+        <div class="card upload-section">
+            <div class="section-title">
+                <span class="icon">📤</span>
+                Upload New PDF Documents
+            </div>
+            <div class="file-input-group">
+                <label for="documentUpload" class="custom-file-upload">
+                    <span class="icon">📁</span>
+                    Choose PDF Files
+                </label>
+                <input type="file" id="documentUpload" accept=".pdf" multiple style="display: none;">
+                <div id="fileNameDisplay" class="file-name-display">No files selected</div>
+            </div>
+            <button id="uploadBtn" class="action-button upload-button" disabled>Upload & Process Documents</button>
+            
+            <div class="section-divider">
+                <span>OR</span>
+            </div>
+            
+            <div class="section-title">
+                <span class="icon">📂</span>
+                Use Existing Indexed Documents
+            </div>
+            <div class="index-section">
+                <div id="currentIndexInfo" class="current-index-info hidden">
+                    <div class="current-index-header">
+                        <strong>Currently Loaded:</strong> 
+                        <button id="changeIndexBtn" class="action-button small-button">Change</button>
+                    </div>
+                    <div id="currentFiles" class="current-files-list"></div>
+                    <div class="index-stats">
+                        <span id="paragraphCount">0 paragraphs</span>
+                        <span class="offline-badge">Offline</span>
+                    </div>
+                </div>
+                <div id="noIndexInfo" class="no-index-info">
+                    <span class="icon">ℹ️</span>
+                    No documents loaded. Upload PDFs or select from existing indexes.
+                </div>
+                <button id="showIndexesBtn" class="action-button">
+                    <span class="icon">🔍</span>
+                    Show Available Indexes
+                </button>
+                <div id="indexesList" class="indexes-list hidden"></div>
+            </div>
+            
+            <div class="action-buttons">
+                <button id="clearSessionBtn" class="action-button clear-session-button hidden">
+                    <span class="icon">🗑️</span>
+                    Clear Current Session
+                </button>
+                <button id="exportChatBtn" class="action-button export-chat-button hidden">
+                    <span class="icon">💾</span>
+                    Export Chat
+                </button>
+                <button id="refreshStatusBtn" class="action-button refresh-button">
+                    <span class="icon">🔄</span>
+                    Refresh Status
+                </button>
+            </div>
+            
+            <div id="statusMessage" class="status-message">Ready to start - System running in offline mode</div>
+        </div>
+
+        <!-- Chat Section -->
+        <div class="card chat-section">
+            <div class="chat-header">
+                <div class="section-title">
+                    <span class="icon">💬</span>
+                    Document Q&A Chat
+                </div>
+                <div class="chat-stats">
+                    <span id="messageCount">0 messages</span>
+                    <span class="offline-badge">Local AI</span>
+                </div>
+            </div>
+            
+            <div id="chatDisplay" class="chat-display">
+                <div class="initial-message">
+                    <div class="welcome-icon">📄</div>
+                    <h3>Welcome to Document Q&A</h3>
+                    <p>Upload PDF documents or load existing indexed documents to start asking questions.</p>
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <span class="icon">🛡️</span>
+                            <span>100% Offline Operation</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="icon">⚡</span>
+                            <span>Local AI Processing</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="icon">🔒</span>
+                            <span>Your Data Stays Local</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="input-section">
+                <textarea id="questionInput" placeholder="Ask a question about your documents... (Press Enter to send, Shift+Enter for new line)" rows="3"></textarea>
+                <button id="askButton" class="action-button ask-button" disabled>
+                    <span class="icon">🚀</span>
+                    Ask Question
+                </button>
+            </div>
+        </div>
+
+        <!-- Setup Instructions Modal -->
+        <div id="setupModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Offline Setup Instructions</h2>
+                
+                <div class="setup-steps">
+                    <div class="setup-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>First-Time Setup (Internet Required)</h3>
+                            <p>Run <code>setup.bat</code> to download AI models and dependencies.</p>
+                            <div class="step-note">This only needs to be done once!</div>
+                        </div>
+                    </div>
+                    
+                    <div class="setup-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Install Ollama</h3>
+                            <p>Download and install Ollama from <a href="https://ollama.ai" target="_blank">ollama.ai</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="setup-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Pull LLM Model</h3>
+                            <p>Run in command prompt: <code>ollama pull llama3</code></p>
+                        </div>
+                    </div>
+                    
+                    <div class="setup-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Run Offline</h3>
+                            <p>Use <code>run.bat</code> to start the application completely offline.</p>
+                            <div class="step-note success">No internet required after setup!</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-actions">
+                    <button class="action-button" onclick="app.closeSetupModal()">Got It</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dark Mode Toggle -->
+        <button id="toggleDarkMode" class="action-button toggle-dark-mode-button">
+            <span class="icon" id="themeIcon">🌙</span>
+            <span id="themeText">Dark Mode</span>
+        </button>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="overlay" class="overlay">
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <div id="loadingMessage">Processing...</div>
+            <div class="loading-details" id="loadingDetails"></div>
+            <button id="stopUploadBtn" class="action-button stop-button hidden">
+                <span class="icon">⏹️</span>
+                Stop Upload
+            </button>
+            <button id="stopQueryBtn" class="action-button stop-button hidden">
+                <span class="icon">⏹️</span>
+                Stop Query
+            </button>
+        </div>
+    </div>
+
+    <!-- Correction Modal -->
+    <div id="correctionModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Correct the Answer</h2>
+            
+            <div class="form-group">
+                <label>Original Question:</label>
+                <div id="originalQuestionDisplay" class="read-only-field"></div>
+            </div>
+            
+            <div class="form-group">
+                <label>Bot's Answer:</label>
+                <div id="botWrongAnswerDisplay" class="read-only-field"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="correctedAnswerInput">Correct Answer:</label>
+                <textarea id="correctedAnswerInput" placeholder="Enter the correct answer based on the document content..." rows="6"></textarea>
+            </div>
+            
+            <div class="modal-actions">
+                <button id="submitCorrectionBtn" class="action-button">
+                    <span class="icon">✅</span>
+                    Submit Correction
+                </button>
+                <button class="action-button secondary-button" onclick="app.closeCorrectionModal()">
+                    <span class="icon">❌</span>
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
